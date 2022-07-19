@@ -1,3 +1,11 @@
 #!/usr/bin/python3
+"""
+    function that raises a type exception
+    """
+
+
 def raise_exception():
-        raise TypeError
+    try:
+        raise(TypeError)
+    except:
+        raise
