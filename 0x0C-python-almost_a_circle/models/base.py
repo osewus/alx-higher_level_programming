@@ -1,23 +1,25 @@
 #!/usr/bin/python3
 """
-Base class defined
+Base Module
 """
-from ast import Import
 import json
 import csv
 
 
 class Base:
     """
-    __nb_objects:
-        Records the number of objects instanciated
-    id:
-        uniquely identifies the instanciated object
+    The Base Class
+    Attributes:
+        __nb_object : private class atribute
     """
-
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """
+        Init
+        Attributes:
+            id (): id
+        """
         if id is not None:
             self.id = id
         else:
@@ -27,7 +29,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """
-        returns a json string representation of list_dictionaries
+            Return A JSON STRING a representation list_dict..
         """
         if not list_dictionaries:
             return "[]"
