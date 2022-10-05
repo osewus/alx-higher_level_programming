@@ -1,13 +1,8 @@
 #!/usr/bin/node
-
-const numsArray = process.argv.slice(2);
-function secondMax (array) {
-  if (array.length < 2) {
-    return (0);
-  } else {
-    array.sort((x, y) => x - y);
-    array.pop();
-    return (array.pop());
-  }
+// script that searches the second biggest integer in the list of arguments
+const mySol = process.argv;
+if (mySol.length <= 3) {
+  console.log(0);
+} else {
+  console.log(mySol.sort((x, y) => y - x).slice(3)[0]);
 }
-console.log(secondMax(numsArray));
